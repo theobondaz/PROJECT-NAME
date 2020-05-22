@@ -16,6 +16,9 @@
       <tr>
         <td><%= flat.name %></td>
         <td><%= flat.address %></td>
+        <td id='flatlatitude'><%= flat.latitude %></td>
+        <td id='flatlongitude'><%= flat.longitude %></td>
+
         <td><%= link_to 'Show', flat %></td>
         <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
         <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
