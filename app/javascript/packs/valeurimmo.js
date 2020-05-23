@@ -14,9 +14,35 @@ const valeurImmo = () => {
             console.log(data.features)
             const appart = data.features
 
-            appart.forEach(function(object, index){
-              
-                console.log(object[index].properties.valeur_fonciere)
+            appart.forEach(function(object){
+                console.log('poop')
+                const valeur = object.properties.valeur_fonciere;
+                const finalcard = document.querySelector(".flatcard");
+
+                const infocard = `<h3>
+                "${object.properties.numero_voie}"
+                "${object.properties.type_voie}"
+                "${object.properties.voie}"
+                </h3>
+
+                <p>
+                "${object.properties.type_local} - "
+                "${object.properties.nombre_pieces_principales} - "
+                "${object.properties.surface_lot_2} "
+                </p>
+
+
+                <h2>
+                "${object.properties.valeur_fonciere}"
+                "Vendu le ${date_mutation} "
+                </h2>
+                `
+
+
+                finalcard.insertAdjacentHTML('afterbegin', infocard );
+                console.log(object.properties.valeur_fonciere);
+                
+                
             })
 
             

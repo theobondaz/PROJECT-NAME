@@ -13,6 +13,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
 
+
 initMapbox();
 initAutocomplete();
 valeurImmo();
